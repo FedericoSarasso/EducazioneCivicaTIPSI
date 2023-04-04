@@ -9,16 +9,16 @@ namespace LavoroEducazioneCivica
             string stringa = "";
             int numero = 0;
 
-            //stringa = "ciao";
-            //numero = 10;
+            //stringa = "ABCDEFGHIJKLOPQRSTUVWXYZ";
+            //numero = 27;
 
-            Console.Write(funzioneUno(stringa.ToUpper(), numero));
+            Console.Write(FunzioneUno(stringa.ToUpper(), numero));
 
 
             Console.ReadLine();
         }
 
-        static string funzioneUno(string stringa, int numero)
+        static string FunzioneUno(string stringa, int numero)
         {
             string stringaCriptata = "";
 
