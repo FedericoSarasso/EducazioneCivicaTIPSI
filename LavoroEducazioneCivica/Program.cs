@@ -36,6 +36,12 @@ namespace LavoroEducazioneCivica
             }
             return stringaCriptata;
         }
+
+        public static string FunzioneDue(string stringa, int numero)
+        {
+            string stringaCriptata = "";
+            return stringaCriptata;
+        }
     }
 }
 
