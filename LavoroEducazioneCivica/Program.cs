@@ -2,7 +2,7 @@
 
 namespace LavoroEducazioneCivica
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -18,7 +18,7 @@ namespace LavoroEducazioneCivica
             Console.ReadLine();
         }
 
-        static string FunzioneUno(string stringa, int numero)
+        public static string FunzioneUno(string stringa, int numero)
         {
             string stringaCriptata = "";
 
