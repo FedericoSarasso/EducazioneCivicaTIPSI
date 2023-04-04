@@ -10,10 +10,11 @@ namespace LavoroEducazioneCivica
             int numero = 0;
 
             //stringa = "ABCDEFGHIJKLOPQRSTUVWXYZ";
-            //numero = 27;
+            //numero = 24;
 
             Console.Write(FunzioneUno(stringa.ToUpper(), numero));
-
+            Console.Write("\n");
+            Console.Write(FunzioneDue(stringa.ToUpper(), numero));
 
             Console.ReadLine();
         }
@@ -40,6 +41,19 @@ namespace LavoroEducazioneCivica
         public static string FunzioneDue(string stringa, int numero)
         {
             string stringaCriptata = "";
+
+            foreach (char c in stringa)
+            {
+                if (char.IsLetter(c))
+                {
+                    char carattereCriptato = (char)(((int)c + (26-numero) - 65) % 26 + 65);
+                    stringaCriptata += carattereCriptato;
+                }
+                else
+                {
+                    stringaCriptata += c;
+                }
+            }
             return stringaCriptata;
         }
     }
