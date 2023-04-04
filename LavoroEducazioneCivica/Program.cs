@@ -10,7 +10,7 @@ namespace LavoroEducazioneCivica
             int numero = 0;
 
             //stringa = "ABCDEFGHIJKLOPQRSTUVWXYZ";
-            //numero = 24;
+            //numero = 1;
 
             Console.Write(FunzioneUno(stringa.ToUpper(), numero));
             Console.Write("\n");
@@ -38,7 +38,7 @@ namespace LavoroEducazioneCivica
             return stringaCriptata;
         }
 
-        public static string FunzioneDue(string stringa, int numero)
+        public static string FunzioneDue(string stringa, int numero)    //impossibilità di inserire numeri superiori a 26
         {
             string stringaCriptata = "";
 
@@ -46,7 +46,7 @@ namespace LavoroEducazioneCivica
             {
                 if (char.IsLetter(c))
                 {
-                    char carattereCriptato = (char)(((int)c + (26-numero) - 65) % 26 + 65);
+                    char carattereCriptato = (char)(((int)c - numero  - 65 + 26) % 26 + 65);
                     stringaCriptata += carattereCriptato;
                 }
                 else
