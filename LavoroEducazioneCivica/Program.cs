@@ -115,6 +115,11 @@ namespace LavoroEducazioneCivica
                 return Convert.ToInt16(result);
             }
         }
+
+        public static int FunzioneSei(string stringa, int numero)
+        {
+            return 0;
+        }
     }
 }
 
