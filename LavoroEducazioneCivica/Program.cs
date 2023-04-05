@@ -5,6 +5,10 @@ using System.Text.RegularExpressions;
 
 namespace LavoroEducazioneCivica
 {
+    public class Global
+    {
+        public static int contatore = 0;
+    }
     public class Program
     {
         static void Main(string[] args)
@@ -24,6 +28,8 @@ namespace LavoroEducazioneCivica
             Console.Write(FunzioneQuattro(stringa.ToUpper(), numero));
             Console.Write("\n");
             Console.Write(FunzioneCinque(stringa.ToUpper(), numero));
+            Console.Write("\n");
+            Console.Write(Global.contatore);
             Console.Write("\n");
 
             Console.ReadLine();
@@ -95,6 +101,7 @@ namespace LavoroEducazioneCivica
 
         public static int FunzioneCinque(string stringa, int numero)
         {
+            Global.contatore += 1;
             int tempNumero = numero;
             string tempStringa = stringa;
             if(tempNumero % 2 == 0)
