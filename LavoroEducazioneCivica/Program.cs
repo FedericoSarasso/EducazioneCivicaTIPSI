@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Diagnostics.Metrics;
+using System.Globalization;
 using System.Text.RegularExpressions;
 
 
@@ -15,26 +17,67 @@ namespace LavoroEducazioneCivica
         {
             string stringa = "";
             int numero = 0;
+            int funzione;
 
-            stringa = "ABC";
-            numero = 1;
+            //stringa = "ABC";
+            //numero = 1;
 
-            Console.Write(FunzioneUno(stringa.ToUpper(), numero));
-            Console.Write("\n");
-            Console.Write(FunzioneDue(stringa.ToUpper(), numero));
-            Console.Write("\n");
-            Console.Write(FunzioneTre(stringa.ToUpper(), numero));
-            Console.Write("\n");
-            Console.Write(FunzioneQuattro(stringa.ToUpper(), numero));
-            Console.Write("\n");
-            Console.Write(FunzioneCinque(stringa.ToUpper(), numero));
-            Console.Write("\n");
-            Console.Write(Global.contatore);
-            Console.Write("\n");
-            Console.Write(FunzioneSei(stringa.ToUpper()));
-            Console.Write("\n");
+            Console.Write("1 -> FunzioneUno\n2 -> FunzioneDue\n3 -> FunzioneTre\n4 -> FunzioneQuattro\n5 -> FunzioneCinque\n6 -> FunzioneSei\n");
 
-            Console.ReadLine();
+            while (true)
+            {
+                try
+                {
+                    Console.Write("Inserisci un numero compreso tra 1 e 6:\n");
+                    funzione = int.Parse(Console.ReadLine());
+                }
+                catch (Exception e)
+                {
+                    funzione = 0;
+                }
+
+                switch (funzione)
+                {
+                    case 1:
+                        stringa = CompilazioneStringa();
+                        numero = CompilazioneNumero();
+                        Console.Write(FunzioneUno(stringa.ToUpper(), numero));
+                        Console.Write("\n");
+                        break;
+                    case 2:
+                        stringa = CompilazioneStringa();
+                        numero = CompilazioneNumero();
+                        Console.Write(FunzioneDue(stringa.ToUpper(), numero));
+                        Console.Write("\n");
+                        break;
+                    case 3:
+                        stringa = CompilazioneStringa();
+                        numero = CompilazioneNumero();
+                        Console.Write(FunzioneTre(stringa.ToUpper(), numero));
+                        Console.Write("\n");
+                        break;
+                    case 4:
+                        stringa = CompilazioneStringa();
+                        numero = CompilazioneNumero();
+                        Console.Write(FunzioneQuattro(stringa.ToUpper(), numero));
+                        Console.Write("\n");
+                        break;
+                    case 5:
+                        stringa = CompilazioneStringa();
+                        numero = CompilazioneNumero();
+                        Console.Write(FunzioneCinque(stringa.ToUpper(), numero));
+                        Console.Write("\n");
+                        break;
+                    case 6:
+                        stringa = CompilazioneStringa();
+                        Console.Write(FunzioneSei(stringa.ToUpper()));
+                        Console.Write("\n");
+                        break;
+                    default:
+                        Console.WriteLine("Errore\n");
+                        break;
+                }
+            }
         }
 
         public static string FunzioneUno(string stringa, int numero)
@@ -123,6 +166,27 @@ namespace LavoroEducazioneCivica
             int tempNumero = Global.contatore;
             string tempStringa = stringa;
             return FunzioneCinque(stringa, tempNumero);
+        }
+
+        public static string CompilazioneStringa()
+        {
+            Console.Write("Inserisci testo: ");
+            return (Console.ReadLine());
+
+        }
+
+        public static int CompilazioneNumero()
+        {
+            try
+            {
+            Console.Write("Inserisci un numero: ");
+            return (int.Parse(Console.ReadLine()));
+            }
+            catch(Exception e)
+            {
+                Console.Write("Inserire esclusivamente numeri, assengato 0\n");
+                return 0;
+            }
         }
     }
 }
