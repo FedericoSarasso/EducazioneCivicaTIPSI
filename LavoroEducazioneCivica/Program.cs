@@ -46,6 +46,7 @@ namespace LavoroEducazioneCivica
 
         public static string FunzioneDue(string stringa, int numero)
         {
+            numero = numero % 26;
             string stringaCriptata = "";
 
             foreach (char c in stringa)
