@@ -70,6 +70,12 @@ namespace LavoroEducazioneCivica
             }
             return numeroCalcolato * numero;
         }
+
+        public static int FunzioneQuattro(string stringa, int numero)    //impossibilità di inserire numeri superiori a 26
+        {
+            int numeroCalcolato = 0;
+            return numeroCalcolato * numero;
+        }
     }
 }
 
