@@ -9,12 +9,14 @@ namespace LavoroEducazioneCivica
             string stringa = "";
             int numero = 0;
 
-            //stringa = "ABCDEFGHIJKLOPQRSTUVWXYZ";
-            //numero = 1;
+            //stringa = "ABC";
+            //numero = 2;
 
             Console.Write(FunzioneUno(stringa.ToUpper(), numero));
             Console.Write("\n");
             Console.Write(FunzioneDue(stringa.ToUpper(), numero));
+            Console.Write("\n");
+            Console.Write(FunzioneTre(stringa.ToUpper(), numero));
 
             Console.ReadLine();
         }
@@ -59,8 +61,14 @@ namespace LavoroEducazioneCivica
         public static int FunzioneTre(string stringa, int numero)    //impossibilità di inserire numeri superiori a 26
         {
             int numeroCalcolato = 0;
-
-            return numeroCalcolato;
+            foreach (char c in stringa)
+            {
+                if (char.IsLetter(c))
+                {
+                    numeroCalcolato += ((int)c - 64);
+                }
+            }
+            return numeroCalcolato * numero;
         }
     }
 }
