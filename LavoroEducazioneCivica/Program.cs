@@ -88,6 +88,12 @@ namespace LavoroEducazioneCivica
             }
             return Math.Round(numeroCalcolato / numero);
         }
+
+        public static double FunzioneCinque(string stringa, int numero)
+        {
+            double numeroCalcolato = 0.0;
+            return numeroCalcolato;
+        }
     }
 }
 
