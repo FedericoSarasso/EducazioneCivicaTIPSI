@@ -56,6 +56,12 @@ namespace LavoroEducazioneCivica
             }
             return stringaCriptata;
         }
+        public static int FunzioneTre(string stringa, int numero)    //impossibilità di inserire numeri superiori a 26
+        {
+            int numeroCalcolato = 0;
+
+            return numeroCalcolato;
+        }
     }
 }
 
