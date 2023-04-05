@@ -46,7 +46,6 @@ namespace LavoroEducazioneCivica
 
         public static string FunzioneDue(string stringa, int numero)
         {
-            numero = numero % 27;
             string stringaCriptata = "";
 
             foreach (char c in stringa)
@@ -78,7 +77,7 @@ namespace LavoroEducazioneCivica
 
         public static double FunzioneQuattro(string stringa, int numero) 
         {
-            double numeroCalcolato = 9.0;
+            double numeroCalcolato = 0.0;
             foreach (char c in stringa)
             {
                 if (char.IsLetter(c))
