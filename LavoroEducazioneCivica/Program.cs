@@ -9,10 +9,10 @@ namespace LavoroEducazioneCivica
         static void Main(string[] args)
         {
             string stringa = "";
-            int numero = 10;
+            int numero = 0;
 
-            //stringa = "ABC";
-            //numero = 2;
+            stringa = "ABC";
+            numero = 3;
 
             Console.Write(FunzioneUno(stringa.ToUpper(), numero));
             Console.Write("\n");
@@ -21,6 +21,9 @@ namespace LavoroEducazioneCivica
             Console.Write(FunzioneTre(stringa.ToUpper(), numero));
             Console.Write("\n");
             Console.Write(FunzioneQuattro(stringa.ToUpper(), numero));
+            Console.Write("\n");
+            Console.Write(FunzioneCinque(stringa.ToUpper(), numero));
+            Console.Write("\n");
 
             Console.ReadLine();
         }
@@ -89,10 +92,20 @@ namespace LavoroEducazioneCivica
             return Math.Round(numeroCalcolato / numero);
         }
 
-        public static double FunzioneCinque(string stringa, int numero)
+        public static int FunzioneCinque(string stringa, int numero)
         {
-            double numeroCalcolato = 0.0;
-            return numeroCalcolato;
+            int tempNumero = numero;
+            string tempStringa = stringa;
+            if(tempNumero % 2 == 0)
+            {
+                
+                return FunzioneTre(tempStringa, tempNumero);
+            }
+            else
+            {
+                double result = FunzioneQuattro(tempStringa, tempNumero);
+                return Convert.ToInt16(result);
+            }
         }
     }
 }
