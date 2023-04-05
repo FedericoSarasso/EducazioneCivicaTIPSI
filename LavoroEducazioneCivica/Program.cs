@@ -17,7 +17,7 @@ namespace LavoroEducazioneCivica
             int numero = 0;
 
             stringa = "ABC";
-            numero = 3;
+            numero = 1;
 
             Console.Write(FunzioneUno(stringa.ToUpper(), numero));
             Console.Write("\n");
@@ -30,6 +30,8 @@ namespace LavoroEducazioneCivica
             Console.Write(FunzioneCinque(stringa.ToUpper(), numero));
             Console.Write("\n");
             Console.Write(Global.contatore);
+            Console.Write("\n");
+            Console.Write(FunzioneSei(stringa.ToUpper()));
             Console.Write("\n");
 
             Console.ReadLine();
@@ -116,9 +118,11 @@ namespace LavoroEducazioneCivica
             }
         }
 
-        public static int FunzioneSei(string stringa, int numero)
+        public static int FunzioneSei(string stringa)
         {
-            return 0;
+            int tempNumero = Global.contatore;
+            string tempStringa = stringa;
+            return FunzioneCinque(stringa, tempNumero);
         }
     }
 }
